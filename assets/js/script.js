@@ -73,6 +73,7 @@ const alaskaGeography = AlaskaGeography[0];
 const quizContainer = document.getElementById("quiz-container");
 const questionContainer = document.getElementById("question-container");
 const nextButton = document.getElementById("next-button");
+const backButton = document.getElementById("back-button");
 
 let currentQuestionIndex = 0;
 
@@ -107,17 +108,21 @@ function displayQuestion() {
     questionContainer.appendChild(optionInput);
     questionContainer.appendChild(optionLabel);
   });
+
+  backButton.disabled = currentQuestionIndex === 0;
+  nextButton.disabled =
+    currentQuestionIndex === alaskaGeography.questions.length - 1;
 }
 
+/* Navigate Questions */
 function nextQuestion() {
   currentQuestionIndex++;
-  if (currentQuestionIndex < alaskaGeography.questions.length) {
-    displayQuestion();
-  } else {
-    quizContainer.innerHTML = "<p>Quiz complete!</p>";
-  }
+  displayQuestion();
+}
+
+function previousQuestion() {
+  currentQuestionIndex--;
+  displayQuestion();
 }
 
 displayQuestion();
-
-nextButton.addEventListener("click", nextQuestion);

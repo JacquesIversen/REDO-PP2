@@ -90,7 +90,6 @@ text-decoration: none;
 color: #ffcc00;
 }
 
-/* About page */
 .content {
 max-width: 800px;
 text-decoration: solid;
@@ -99,6 +98,10 @@ padding: 20px;
 background-color: #fff;
 border-radius: 10px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+text-decoration: none;
 }
 
 /* Contact Page */
@@ -130,4 +133,38 @@ font-weight: bold;
 
 button:hover {
 background-color: #ffe066;
+}
+
+/* Quizlist  */
+#quiz-container {
+max-width: 600px;
+margin: 0 auto;
+background-color: #f8f8f8;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+.question-container {
+margin-bottom: 20px;
+display: block;
+}
+
+p {
+margin-bottom: 10px;
+}
+
+input {
+margin-right: 5px;
+margin-bottom: 5px;
+}
+
+button:disabled {
+background-color: #ccc;
+cursor: not-allowed;
 }
