@@ -1,4 +1,4 @@
-const quizzes = [
+const AlaskaGeography = [
   {
     name: "Alaska Geography",
     image: "alaska-image.jpg",
@@ -69,36 +69,55 @@ const quizzes = [
   },
 ];
 
-let currentQuizIndex = 0;
+const alaskaGeography = AlaskaGeography[0];
+const quizContainer = document.getElementById("quiz-container");
+const questionContainer = document.getElementById("question-container");
+const nextButton = document.getElementById("next-button");
+
 let currentQuestionIndex = 0;
 
-function displayQuiz() {
-  const quizContainer = document.getElementById("quiz-container");
-  const currentQuiz = quizzes[currentQuizIndex];
-  const currentQuestion = currentQuiz.questions[currentQuestionIndex];
+function displayQuestion() {
+  const questionData = alaskaGeography.questions[currentQuestionIndex];
 
-  quizContainer.innerHTML = "";
+  /* Clear Previous Question */
+  questionContainer.innerHTML = "";
 
-  const questionElement = document.createElement("p");
-  questionElement.classList.add("question");
-  questionElement.textContent = currentQuestion.question;
-  quizContainer.appendChild(questionElement);
+  /* Display Image */
+  const questionImage = document.createElement("img");
+  questionImage.src = questionData.image;
+  questionContainer.appendChild(questionImage);
 
-  const optionsList = document.createElement("ul");
-  optionsList.classList.add("options");
-  currentQuestion.options.forEach((option, index) => {
-    const listItem = document.createElement("li");
-    const label = document.createElement("label");
-    const radioInput = document.createElement("input");
-    radioInput.type = "radio";
-    radioInput.name = "quiz-option";
-    radioInput.value = option;
-    label.appendChild(radioInput);
-    label.appendChild(document.createTextNode(option));
-    listItem.appendChild(label);
-    optionsList.appendChild(listItem);
+  /* Display Question */
+  const questionText = document.createElement("p");
+  questionText.textContent = questionData.question;
+  questionContainer.appendChild(questionText);
+
+  /* Display options  */
+  questionData.options.forEach((option, optionIndex) => {
+    const optionInput = document.createElement("input");
+    optionInput.type = "radio";
+    optionInput.name = `question${currentQuestionIndex}`;
+    optionInput.value = option;
+    optionInput.id = `q${currentQuestionIndex}o${optionIndex}`;
+
+    const optionLabel = document.createElement("label");
+    optionLabel.textContent = option;
+    optionLabel.setAttribute("for", `q${currentQuestionIndex}o${optionIndex}`);
+
+    questionContainer.appendChild(optionInput);
+    questionContainer.appendChild(optionLabel);
   });
-  quizContainer.appendChild(optionsList);
 }
 
-displayQuiz();
+function nextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < alaskaGeography.questions.length) {
+    displayQuestion();
+  } else {
+    quizContainer.innerHTML = "<p>Quiz complete!</p>";
+  }
+}
+
+displayQuestion();
+
+nextButton.addEventListener("click", nextQuestion);
