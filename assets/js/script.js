@@ -132,6 +132,7 @@ function nextQuestion() {
   if (currentQuestionIndex < alaskaGeography.questions.length) {
     displayQuestion();
   } else {
+    localStorage.setItem("quizScore", currentQuestionIndex);
     window.location.href = "score.html";
   }
 }
@@ -142,3 +143,5 @@ function previousQuestion() {
 }
 
 displayQuestion();
+
+
