@@ -25,26 +25,28 @@
       </nav>
 
       <div class="content">
-        <h2>Quizzes</h2>
-        <ul class="quizzes-list">
-          <li><a href="startQuiz.html">Quiz 1</a></li>
-          <li><a href="startQuiz.html">Quiz 2</a></li>
-          <li><a href="startQuiz.html">Quiz 3</a></li>
+        <h2>Quiz Time! (name of quiz)</h2>
+    
+        <img src="your-image-url.jpg" alt="Alaska Image">
+        <p class="question">What is the largest city in Alaska?</p>
+        <ul class="options">
+          <li>
+            <label>
+              <input type="radio" name="q1" value="option1"> Anchorage
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="q1" value="option2"> Fairbanks
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="q1" value="option3"> Juneau
+            </label>
+          </li>
         </ul>
-      </div>
-      <div class="content">
-        <h2>Highscores</h2>
-        <ul class="high-score">
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-          <li>Username: <span>Quiz: </span></li>
-        </ul>
+        <button onclick="submitQuiz()">Submit Quiz</button>
       </div>
 
       <footer>
