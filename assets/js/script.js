@@ -1,10 +1,9 @@
 const AlaskaGeography = [
   {
     name: "Alaska Geography",
-    image: "alaska-image.jpg",
     questions: [
       {
-        image: "alaska-image.jpg",
+        image: "anchor",
         question: "What is the largest city in Alaska by population?",
         options: ["Anchorage", "Fairbanks", "Juneau"],
         correctAnswer: "Anchorage",
@@ -74,6 +73,8 @@ const quizContainer = document.getElementById("quiz-container");
 const questionContainer = document.getElementById("question-container");
 const nextButton = document.getElementById("next-button");
 const backButton = document.getElementById("back-button");
+const progressBar = document.getElementById("progress-bar");
+const progressPercent = document.getElementById("progress-percent");
 
 let currentQuestionIndex = 0;
 
@@ -110,14 +111,29 @@ function displayQuestion() {
   });
 
   backButton.disabled = currentQuestionIndex === 0;
-  nextButton.disabled =
-    currentQuestionIndex === alaskaGeography.questions.length - 1;
+  nextButton.disabled = true;
+
+  questionContainer.addEventListener("change", function (event) {
+    const selectedOption = document.querySelector(
+      `input[name="question${currentQuestionIndex}"]:checked`
+    );
+
+    nextButton.disabled = !selectedOption;
+  });
+
+  const progress =
+    (currentQuestionIndex / alaskaGeography.questions.length) * 100;
+  progressBar.style.width = `${progress}%`;
+  progressPercent.textContent = `${Math.round(progress)}%`;
 }
 
-/* Navigate Questions */
 function nextQuestion() {
   currentQuestionIndex++;
-  displayQuestion();
+  if (currentQuestionIndex < alaskaGeography.questions.length) {
+    displayQuestion();
+  } else {
+    window.location.href = "score.html";
+  }
 }
 
 function previousQuestion() {
