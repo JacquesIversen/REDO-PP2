@@ -142,8 +142,7 @@ text-decoration: underline;
 /* index */
 .hero-container {
 position: relative;
-height: 400px; 
-background-image: url("/assets/media/pic1.png");
+height: 400px;
 background-size: cover;
 background-position: center;
 display: flex;
