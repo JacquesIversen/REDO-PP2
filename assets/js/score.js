@@ -1,7 +1,6 @@
 const score = localStorage.getItem("quizScore");
 document.getElementById("score").value = score;
 document.getElementById("display-score").textContent = score;
-console.log(score);
 
 const highscoreForm = document.getElementById("highscore-form");
 
@@ -14,7 +13,14 @@ highscoreForm.addEventListener("submit", function (event) {
       username: username,
       score: score,
     };
-    console.log("Highscore Data:", highscoreData);
+
+    const existingHighscores =
+      JSON.parse(localStorage.getItem("highscores")) || [];
+
+    existingHighscores.push(highscoreData);
+
+    localStorage.setItem("highscores", JSON.stringify(existingHighscores));
+    window.location.href = "quizlist.html";
   } else {
     alert("Please enter a valid username.");
   }
