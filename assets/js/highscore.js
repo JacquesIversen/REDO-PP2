@@ -10,6 +10,7 @@ const dummyHighscores = [
 
 localStorage.setItem("highscores", JSON.stringify(dummyHighscores));
 highscores.push(...dummyHighscores);
+highscores.sort((a, b) => b.score - a.score);
 
 const highscoreList = document.getElementById("highscore-list");
 
