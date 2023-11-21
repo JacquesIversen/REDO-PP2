@@ -79,6 +79,7 @@ const scoreDisplay = document.getElementById("score");
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
+let selectedOptions = [];
 
 function displayQuestion() {
   const questionData = alaskaGeography.questions[currentQuestionIndex];
@@ -112,18 +113,22 @@ function displayQuestion() {
     optionContainer.appendChild(optionInput);
     optionContainer.appendChild(optionLabel);
 
+    if (selectedOptions[currentQuestionIndex] === option) {
+      optionInput.checked = true;
+    }
+
     questionContainer.appendChild(optionContainer);
   });
 
   backButton.disabled = currentQuestionIndex === 0;
-  nextButton.disabled = true;
+  nextButton.disabled = selectedOptions[currentQuestionIndex] === undefined;
 
   questionContainer.addEventListener("change", function (event) {
     const selectedOption = document.querySelector(
       `input[name="question${currentQuestionIndex}"]:checked`
     );
-    if (selectedOption && selectedOption.value === questionData.correctAnswer) {
-      correctAnswers++;
+    if (selectedOption) {
+      selectedOptions[currentQuestionIndex] = selectedOption.value;
     }
 
     nextButton.disabled = !selectedOption;
