@@ -75,8 +75,10 @@ const nextButton = document.getElementById("next-button");
 const backButton = document.getElementById("back-button");
 const progressBar = document.getElementById("progress-bar");
 const progressPercent = document.getElementById("progress-percent");
+const scoreDisplay = document.getElementById("score");
 
 let currentQuestionIndex = 0;
+let correctAnswers = 0;
 
 function displayQuestion() {
   const questionData = alaskaGeography.questions[currentQuestionIndex];
@@ -117,6 +119,9 @@ function displayQuestion() {
     const selectedOption = document.querySelector(
       `input[name="question${currentQuestionIndex}"]:checked`
     );
+    if (selectedOption && selectedOption.value === questionData.correctAnswer) {
+      correctAnswers++;
+    }
 
     nextButton.disabled = !selectedOption;
   });
@@ -132,7 +137,7 @@ function nextQuestion() {
   if (currentQuestionIndex < alaskaGeography.questions.length) {
     displayQuestion();
   } else {
-    localStorage.setItem("quizScore", currentQuestionIndex);
+    localStorage.setItem("quizScore", correctAnswers);
     window.location.href = "score.html";
   }
 }
@@ -144,4 +149,4 @@ function previousQuestion() {
 
 displayQuestion();
 
-
+scoreDisplay.textContent = `Your Score: ${correctAnswers}`;
