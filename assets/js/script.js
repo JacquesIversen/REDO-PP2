@@ -3,27 +3,27 @@ const AlaskaGeography = [
     name: "Alaska Geography",
     questions: [
       {
-        image: "anchor",
+        image: "assets/media/pic1.png",
         question: "What is the largest city in Alaska by population?",
         options: ["Anchorage", "Fairbanks", "Juneau"],
         correctAnswer: "Anchorage",
       },
       {
-        image: "alaska-image.jpg",
+        image: "assets/media/pic2.png",
         question:
           "Which mountain range runs through the southern part of Alaska?",
         options: ["Alaska Range", "Sierra Nevada", "Rocky Mountains"],
         correctAnswer: "Alaska Range",
       },
       {
-        image: "alaska-image.jpg",
+        image: "assets/media/pic3.png",
         question:
           "Which of the following bodies of water does not border Alaska?",
         options: ["Bering Sea", "Gulf of Alaska", "Hudson Bay"],
         correctAnswer: "Hudson Bay",
       },
       {
-        image: "alaska-image.jpg",
+        image: "assets/media/pic4.png",
         question:
           "Which national park in Alaska is known for its diverse wildlife and stunning landscapes, including Mount McKinley?",
         options: [
@@ -34,20 +34,20 @@ const AlaskaGeography = [
         correctAnswer: "Denali National Park",
       },
       {
-        image: "alaska-image.jpg",
+        image: "assets/media/pic5.png",
         question: "Which river is the longest in Alaska?",
         options: ["Yukon River", "Tanana River", "Susitna River"],
         correctAnswer: "Yukon River",
       },
       {
-        image: "alaska-image.jpg",
+        image: "assets/media/pic6.png",
         question:
           "What is the largest glacier in North America, located in southeastern Alaska?",
         options: ["Hubbard Glacier", "Columbia Glacier", "Mendenhall Glacier"],
         correctAnswer: "Hubbard Glacier",
       },
       {
-        image: "alaska-image.jpg",
+        image: "assets/media/pic7.png",
         question:
           "Which island group in the Aleutian chain is the westernmost point of the United States?",
         options: [
@@ -58,7 +58,7 @@ const AlaskaGeography = [
         correctAnswer: "Attu and the Near Islands",
       },
       {
-        image: "alaska-image.jpg",
+        image: "assets/media/pic8.png",
         question:
           "Which major fault line runs through southern Alaska, contributing to its seismic activity?",
         options: [" San Andreas Fault", "Hayward Fault", "Denali Fault"],
@@ -108,8 +108,11 @@ function displayQuestion() {
     optionLabel.textContent = option;
     optionLabel.setAttribute("for", `q${currentQuestionIndex}o${optionIndex}`);
 
-    questionContainer.appendChild(optionInput);
-    questionContainer.appendChild(optionLabel);
+    const optionContainer = document.createElement("div");
+    optionContainer.appendChild(optionInput);
+    optionContainer.appendChild(optionLabel);
+
+    questionContainer.appendChild(optionContainer);
   });
 
   backButton.disabled = currentQuestionIndex === 0;

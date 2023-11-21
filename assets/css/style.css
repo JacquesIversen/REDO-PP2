@@ -133,6 +133,10 @@ text-decoration: none;
 color: #333;
 }
 
+.inline-links {
+text-decoration: underline;
+}
+
 /* Contact Page */
 form {
 display: flex;
@@ -158,6 +162,7 @@ border: none;
 border-radius: 5px;
 cursor: pointer;
 font-weight: bold;
+margin-top: 5px;
 }
 
 button:hover {
@@ -172,6 +177,7 @@ background-color: #f8f8f8;
 padding: 20px;
 border-radius: 8px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+text-align: center;
 }
 
 .content h3 {
@@ -188,6 +194,19 @@ height: auto;
 .question-container {
 margin-bottom: 20px;
 display: block;
+}
+
+input[type="radio"] {
+margin-right: 15px;
+}
+
+label {
+margin-bottom: 15px;
+}
+
+input[type="radio"]:checked + label {
+font-weight: bold;
+color: #ffcc00;
 }
 
 ul {
