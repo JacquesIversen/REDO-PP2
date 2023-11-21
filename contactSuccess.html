@@ -8,7 +8,7 @@
       src="https://kit.fontawesome.com/583ee2daba.js"
       crossorigin="anonymous"
     ></script>
-    <title>Contact us</title>
+    <title>Thank you</title>
 </head>
 
 <body>
@@ -24,19 +24,10 @@
         </ul>
       </nav>
 
-      <div class="content">
-        <h2>Contact Us</h2>
-        <form >
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-          <button type="submit" onclick="submitForm()">Send</button>
-        </form>
+      <div class="content-highscore">
+        <h3>Thanks for your message</h3>
+        <h3>Well reply as soon as we can</h3>
+        <a href="index.html"><button>Go Back</button></a>
       </div>
 
       <footer>
@@ -48,11 +39,5 @@
         </div>
     </footer>
 
-    <script>
-      function submitForm() {
-          console.log("Hehehe, we wont pay for a mailservice!");
-          window.location.href = "/contactSuccess.html";
-      }
-  </script>
 </body>
 </html>
