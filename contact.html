@@ -35,7 +35,7 @@
           <input type="text" id="subject" name="subject" required>
           <label for="message">Message:</label>
           <textarea id="message" name="message" rows="5" required></textarea>
-          <button type="submit" onclick="submitForm()">Send</button>
+          <a href="contactSuccess.html"><button type="submit">Send</button></a>
         </form>
       </div>
 
@@ -47,12 +47,5 @@
             <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"> </i></a>
         </div>
     </footer>
-
-    <script>
-      function submitForm() {
-          console.log("Hehehe, we wont pay for a mailservice!");
-          window.location.href = "/contactSuccess.html";
-      }
-  </script>
 </body>
 </html>

@@ -137,6 +137,19 @@ color: #333;
 text-decoration: underline;
 }
 
+/* index */
+.hero-container {
+position: relative;
+height: 400px; 
+background-image: url("/assets/media/pic1.png");
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
 /* Contact Page */
 form {
 display: flex;
