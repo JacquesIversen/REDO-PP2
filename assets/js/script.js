@@ -127,8 +127,17 @@ function displayQuestion() {
     const selectedOption = document.querySelector(
       `input[name="question${currentQuestionIndex}"]:checked`
     );
+
     if (selectedOption) {
-      selectedOptions[currentQuestionIndex] = selectedOption.value;
+      const selectedValue = selectedOption.value;
+      const correctAnswer =
+        alaskaGeography.questions[currentQuestionIndex].correctAnswer;
+
+      selectedOptions[currentQuestionIndex] = selectedValue;
+
+      if (selectedValue === correctAnswer) {
+        correctAnswers++;
+      }
     }
 
     nextButton.disabled = !selectedOption;
