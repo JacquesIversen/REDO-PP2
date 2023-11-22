@@ -54,13 +54,33 @@ The design showcases following:
   - **[End of Quiz](#endquiz)**
   - **[Highscore](#highscore)**
 
-**[Landingpage / Indexpage](#LP)**
+### [Landingpage / Indexpage](#LP)
 
-**[Navbar](#NB)**
+# ![**CSA**](assets/media/readme/index.png)
 
-**[Footer](#footer)**
+On this page, users are met with a greeting, a responsive heroimage to set the mood, and a small telling about who the quiz team are. Navbar and footer are fixed.
 
-**[About Page](#about)**
+### [Navbar](#NB)
+
+# ![**CSA**](assets/media/readme/navbar.png)
+
+With a small logo of own design on top, the Navbar features 4 options:
+
+- Home
+- About
+- Quizzes
+- Contact
+  The navbar is generic, and is visable on all pages/sites. On smaller screens, options will stack on top of one another.
+
+### [Footer](#footer)
+
+# ![**CSA**](assets/media/readme/footer.png)
+
+The footer contains 3 links, for facebook, twitter and instagram, along with their respective favicon. The link will take you to their homepage opening in another window.
+
+### [About Page](#about)
+
+# ![**CSA**](assets/media/readme/about.png)
 
 **[Contact Form](#contact)**
 
@@ -74,22 +94,20 @@ The design showcases following:
 
 **[Highscore](#highscore)**
 
-**[Typography](#typography)**
+### [Typography](#typography)
 
-**[ColorScheme](#colorscheme)**
+### [ColorScheme](#colorscheme)
 
-**[Features](#features)**
+### [Features](#features)
 
-**[Features](#features)**
+### [Features for the future](#features-future)
 
-**[Features for the future](#features-future)**
+## [Testing](#testing)
 
-**[Testing](#testing)**
+See this file for testing
 
-**[Deployment](#deployment)**
+## [Deployment](#deployment)
 
-## Deployment
----
 The steps to deploy is as follows:
 
 git add <file> - This command was used to add the file(s) to the staging area before they are committed.
@@ -99,6 +117,7 @@ git commit -m “commit message” - This command was used to commit changes to 
 git push - This command was used to push all committed code to the remote repository on github.
 
 Deployment to Github Pages
+
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
 - In the GitHub repository, navigate to the Settings tab
 - From the menu on left select 'Pages'
@@ -107,11 +126,24 @@ Deployment to Github Pages
 - A live link will be displayed in a green banner when published successfully.
 
 ### Issues/Bugs on deplyment
-When deploying this, links and Href's in the files were not compiling. 
+
+When deploying this, links and Href's in the files were not compiling.
 Backslash (/) were removed before link ex. /index.html. Same issue went for links to assets files. This was removed and tested.
 
+## [Technologies used](#technologies-used)
 
+- HTML: The structure is devoloped using HTML as main language.
+- CSS: Site is styled from custom CSS in one single external file.
+- Javascript: Game logic and statements created using Js in external files.
+- VS Code editor: Whole site is devolved in Visual Studio Code IDE.
+- GIT & GitHub: Committed and pushed through Git to Github and deployed through Pages.
 
-**[Technologies used](#technologies-used)**
+## [Credits](#credits)
 
-**[Credits](#credits)**
+- Multiple google searches for implemented code solutions.
+- StackOveflow
+- React documentation for logic.
+- Bootstrap documentation for container and style design ideas.
+- Canva, Logo maker.
+- W3 Schools.
+- Youtube, Netninja was used for setting up file structure.
