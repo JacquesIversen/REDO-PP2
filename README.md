@@ -12,8 +12,6 @@ This project came together to accommodate an understanding in JavaScript languag
 - **[Design](#design)**
   - **[Typography](#typography)**
   - **[ColorScheme](#colorscheme)**
-- **[Features](#features)**
-  - **[Features](#features)**
   - **[Features for the future](#features-future)**
 - **[Testing](#testing)**
 - **[Deployment](#deployment)**
@@ -89,6 +87,30 @@ The design showcases following:
 **[Testing](#testing)**
 
 **[Deployment](#deployment)**
+
+## Deployment
+---
+The steps to deploy is as follows:
+
+git add <file> - This command was used to add the file(s) to the staging area before they are committed.
+
+git commit -m “commit message” - This command was used to commit changes to the local repository queue ready for the final step.
+
+git push - This command was used to push all committed code to the remote repository on github.
+
+Deployment to Github Pages
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+- In the GitHub repository, navigate to the Settings tab
+- From the menu on left select 'Pages'
+- From the source section drop-down menu, select the Branch: main
+- Click 'Save'
+- A live link will be displayed in a green banner when published successfully.
+
+### Issues/Bugs on deplyment
+When deploying this, links and Href's in the files were not compiling. 
+Backslash (/) were removed before link ex. /index.html. Same issue went for links to assets files. This was removed and tested.
+
+
 
 **[Technologies used](#technologies-used)**
 
