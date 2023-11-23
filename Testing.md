@@ -4,6 +4,22 @@
 
 - A series of manual tests were carried out to verify that all functionalities performed as intended. Below are the test cases.
 
+- W3C Validator used for all .html files. If error, error will be listed in testcase under bugs:
+- Jigsaw CSS Validator, no errors found.
+- JS Validator (Jshint)
+
+# ![**CSA**](assets/media/testing/JSValidator.script.png)
+
+    - script.js
+
+# ![**CSA**](assets/media/testing/JsValidator.highscore.png)
+
+    - highscore.js
+
+# ![**CSA**](assets/media/testing/JSValidator.score.png)
+
+    - score.js
+
 ## Index Page / Home Page
 
 **Test Case Description:** Verify all features of the page:
@@ -71,6 +87,11 @@ All links should take you to their respective endpoint. Page should be responsiv
 **Expected Result:**
 User will be redirected on formsubmission, only if all imputs filled.
 All links should take you to their respective endpoint. Page should be responsive down to 200px
+
+**Bugs:**
+
+- W3C Validator, error in Form on Aria-label, solved == removed.
+- W3C Validator (contactsuccess) button inside a changed to a inside button
 
 **Result:** Passed
 
