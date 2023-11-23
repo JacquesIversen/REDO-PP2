@@ -15,9 +15,11 @@ if (!storedHighscores || storedHighscores.length === 0) {
 
 highscores.sort((a, b) => b.score - a.score);
 
+const top10Highscores = highscores.slice(0, 10);
+
 const highscoreList = document.getElementById("highscore-list");
 
-highscores.forEach((highscore) => {
+top10Highscores.forEach((highscore) => {
   const listItem = document.createElement("li");
   listItem.textContent = `${highscore.username} - ${highscore.score}`;
   listItem.classList.add("highscore-li");
