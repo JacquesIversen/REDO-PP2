@@ -118,17 +118,48 @@ Features of this page:
 
 # ![**CSA**](assets/media/readme/inquiz.png)
 
-**[End of Quiz](#endquiz)**
+### [End of Quiz](#endquiz)
 
-**[Highscore](#highscore)**
+When completing all questions 8 in this quiz, users will be taken to the submit highscore to then be redirected to the highscore/quiz page once again. And if their score made the top to, will then be displayed.
+
+# ![**CSA**](assets/media/readme/scoreboard.png)
+
+### [Highscore](#highscore)
+
+In the highscore elements, users will find 3 highscores atm. with the only for Alaska Geography at the top, only displaying top 10. In this readme example, localstorage in not cleared, and a score of 34 is at the top, due to an increment error in js, this error is solcved.
+
+# ![**CSA**](assets/media/readme/highscore.png)
 
 ### [Typography](#typography)
 
+No changes were made here:
+
 ### [ColorScheme](#colorscheme)
 
-### [Features](#features)
+Following colors were used and browsed from react bootstrap library.
+
+- Body - background-color: #f4f4f4;, content: background-color: #fff;
+- Header: background-color: #333;
+- Nav - background-color: #444; Hovering color: #ffcc00;
+- Footer: background-color: #333;, Hovering color: #ffcc00;
+- Button: background-color: #ffcc00; hovering: background-color: #ffe066;
 
 ### [Features for the future](#features-future)
+Ideas to implement in the future: 
+- More options on landing page: 
+  - Quiz Highscore, with linking to quiz. 
+  - Link direct to contact
+  - References
+- Apealing design on About page
+- Horizontal responsiveness in nav, footer elements
+- Collapse button on footer (responsiveness)
+- In Quiz:
+  - Perhaps a right/wrong option.
+  - Have question horizontal centered in smaller screens.
+  - A Hint function
+- Highscore could have a interactive greeting, depending on your score. 
+- Contact form linked to mailservice
+
 
 ## [Testing](#testing)
 
