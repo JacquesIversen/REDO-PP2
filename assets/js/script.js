@@ -123,30 +123,33 @@ function displayQuestion() {
   backButton.disabled = currentQuestionIndex === 0;
   nextButton.disabled = selectedOptions[currentQuestionIndex] === undefined;
 
-  questionContainer.addEventListener("change", function (event) {
-    const selectedOption = document.querySelector(
-      `input[name="question${currentQuestionIndex}"]:checked`
-    );
-
-    if (selectedOption) {
-      const selectedValue = selectedOption.value;
-      const correctAnswer =
-        alaskaGeography.questions[currentQuestionIndex].correctAnswer;
-
-      selectedOptions[currentQuestionIndex] = selectedValue;
-
-      if (selectedValue === correctAnswer) {
-        correctAnswers++;
-      }
-    }
-
-    nextButton.disabled = !selectedOption;
-  });
+  questionContainer.removeEventListener("change", handleOptionChange);
+  questionContainer.addEventListener("change", handleOptionChange);
 
   const progress =
     (currentQuestionIndex / alaskaGeography.questions.length) * 100;
   progressBar.style.width = `${progress}%`;
   progressPercent.textContent = `${Math.round(progress)}%`;
+}
+
+function handleOptionChange(event) {
+  const selectedOption = document.querySelector(
+    `input[name="question${currentQuestionIndex}"]:checked`
+  );
+
+  if (selectedOption) {
+    const selectedValue = selectedOption.value;
+    const correctAnswer =
+      alaskaGeography.questions[currentQuestionIndex].correctAnswer;
+
+    selectedOptions[currentQuestionIndex] = selectedValue;
+
+    if (selectedValue === correctAnswer) {
+      correctAnswers++;
+    }
+  }
+
+  nextButton.disabled = !selectedOption;
 }
 
 function nextQuestion() {
