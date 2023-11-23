@@ -40,7 +40,9 @@ The build is following agile workflow, but without any written tickets or classi
 
 ## [Design](#design)
 
-The design showcases following:
+The design for this website is very simple, hence why no additional font is chosen, nor are any progressive colorschemes used.
+
+### The design showcases following:
 
 - **[Landingpage / Indexpage](#LP)**
   - **[Navbar](#NB)**
@@ -50,19 +52,16 @@ The design showcases following:
   - **[Contact Success](#contact-success)**
 - **[Quizzing Page / Quizlist](#quizpage)**
   - **[Start Quiz](#startquiz)**
-  - **[In Quiz](#inquiz)**
   - **[End of Quiz](#endquiz)**
   - **[Highscore](#highscore)**
 
 ### [Landingpage / Indexpage](#LP)
 
-# ![**CSA**](assets/media/readme/index.png)
-
 On this page, users are met with a greeting, a responsive heroimage to set the mood, and a small telling about who the quiz team are. Navbar and footer are fixed.
 
-### [Navbar](#NB)
+# ![**CSA**](assets/media/readme/index.png)
 
-# ![**CSA**](assets/media/readme/navbar.png)
+### [Navbar](#NB)
 
 With a small logo of own design on top, the Navbar features 4 options:
 
@@ -72,23 +71,52 @@ With a small logo of own design on top, the Navbar features 4 options:
 - Contact
   The navbar is generic, and is visable on all pages/sites. On smaller screens, options will stack on top of one another.
 
-### [Footer](#footer)
+# ![**CSA**](assets/media/readme/navbar.png)
 
-# ![**CSA**](assets/media/readme/footer.png)
+### [Footer](#footer)
 
 The footer contains 3 links, for facebook, twitter and instagram, along with their respective favicon. The link will take you to their homepage opening in another window.
 
+# ![**CSA**](assets/media/readme/footer.png)
+
 ### [About Page](#about)
+
+In the about page, users can read some generated text regaring a fictional quiz team who is the pride & joy of alaska.
 
 # ![**CSA**](assets/media/readme/about.png)
 
-**[Contact Form](#contact)**
+### [Contact Form](#contact)
 
-**[Quizzing Page / Quizlist](#quizpage)**
+The contact page is designed only to provide users with some interactivity that is not readable. The contact form is merely dummy, and will not store, send or cause any effect. Users are though required to list out all input fields inorder to proceed. When sending a furfilled form, users will be taken to the success page, which is just a single sentence verifying their submission.
 
-**[Start Quiz](#startquiz)**
+# ![**CSA**](assets/media/readme/contact.png)
 
-**[In Quiz](#inquiz)**
+- Success Page
+
+# ![**CSA**](assets/media/readme/success.png)
+
+### [Quizzing Page / Quizlist](#quizpage)
+
+# ![**CSA**](assets/media/readme/quizpage.png)
+
+Users are met with the current quizzes in the top, highscores for each individual quiz beneath. Alaska Geography is the only active quiz, and will show scores loaded from localstorage, alongside 3 dummy scores to furfill, if none are present. Hovering effect are added only to Quiz Names, to provide users some interactivity and CTA.
+
+When accessing The 2 quizzes, users will be redirected to notfound page:
+The page not found have one option, to contact the administrators to provide ideas. Clicking the "here" link will take you to the contact form.
+
+# ![**CSA**](assets/media/readme/notfound.png)
+
+### [Start Quiz](#startquiz)
+
+In quiz, starting from the top, users will underneath the title of the quiz have a progress bar, which is both a graphic and percentage. Beneath, they'll see a picture to amplify the question, the question beneath that, and 3 options.
+
+Features of this page:
+
+- Inactive next button, user cant progress without pressing a radio button.
+- Inactive Back button, only on page 1. If users are progressing midquiz, their previous answer will be autofurfilled in the question which they'll return.
+- Colorscheme is similar to rest of page, light grey and yellow.
+
+# ![**CSA**](assets/media/readme/inquiz.png)
 
 **[End of Quiz](#endquiz)**
 
