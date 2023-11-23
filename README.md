@@ -145,9 +145,11 @@ Following colors were used and browsed from react bootstrap library.
 - Button: background-color: #ffcc00; hovering: background-color: #ffe066;
 
 ### [Features for the future](#features-future)
-Ideas to implement in the future: 
-- More options on landing page: 
-  - Quiz Highscore, with linking to quiz. 
+
+Ideas to implement in the future:
+
+- More options on landing page:
+  - Quiz Highscore, with linking to quiz.
   - Link direct to contact
   - References
 - Apealing design on About page
@@ -157,13 +159,21 @@ Ideas to implement in the future:
   - Perhaps a right/wrong option.
   - Have question horizontal centered in smaller screens.
   - A Hint function
-- Highscore could have a interactive greeting, depending on your score. 
+- Highscore could have a interactive greeting, depending on your score.
 - Contact form linked to mailservice
-
 
 ## [Testing](#testing)
 
-See this file for testing
+- Manual Testing:
+
+Click here for [Testing File](Testing.md)
+
+Tools for testing:
+
+- Chrome Devtools:
+- AI for validation
+- Validate Javascript
+- CSS Validator
 
 ## [Deployment](#deployment)
 

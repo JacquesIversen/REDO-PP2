@@ -131,6 +131,23 @@ border-radius: 10px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.content-not-found {
+max-width: 800px;
+text-decoration: solid;
+margin: 20px auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 300px) {
+.content-not-found {
+    padding: 10px;
+font-size: 12px;
+}
+}
+
 a {
 text-decoration: none;
 color: #333;
